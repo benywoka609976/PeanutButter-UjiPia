@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natural Harvest Foods - Peanut Butter & Porridge Flour</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Natural Harvest Foods</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#cart">Cart (<span id="cart-count">0</span>)</a></li>
+                <li><a href="tel:0714520249">Call: 0714 520 249</a></li>
+            </ul>
+        </nav>
+        <div id="home" class="hero">
+            <div class="hero-content">
+                <h1>Fresh from Kisumu: Natural Peanut Butter & Porridge Flour</h1>
+                <p>Secure Pay on Delivery | Free Delivery in Kisumu</p>
+                <a href="#products" class="cta-btn">Shop Now</a>
+            </div>
+            <img src="https://images.pexels.com/photos/5149342/pexels-photo-5149342.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Hero - Peanut Butter Jar" class="hero-img">
+        </div>
+    </header>
+
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>Committed to sustainable farming in Kisumu. Hand-ground peanut butter and fortified porridge flour for your family's health. <strong>Pay on Delivery</strong> makes us unique and secure—no upfront risks!</p>
+    </section>
+
+    <section id="products" class="products">
+        <h2>Our Products</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="https://images.pexels.com/photos/5149342/pexels-photo-5149342.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Creamy Peanut Butter">
+                <h3>Creamy Peanut Butter</h3>
+                <p>Freshly ground from Kisumu peanuts. Rich in protein.</p>
+                <select id="pb-size" class="size-select">
+                    <option value="250">250ml - KES 150</option>
+                    <option value="500">500ml - KES 280</option>
+                    <option value="1000">1L - KES 500</option>
+                </select>
+                <p class="price" id="pb-price">KES 150</p>
+                <button onclick="addToCart('Peanut Butter', 150, 1, '250ml')" class="add-btn">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://images.pexels.com/photos/6287219/pexels-photo-6287219.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Porridge Flour">
+                <h3>Nutritious Porridge Flour</h3>
+                <p>Blended sorghum & millet. Gluten-free and fortified.</p>
+                <select id="pf-size" class="size-select">
+                    <option value="500">500g - KES 100</option>
+                    <option value="1000">1kg - KES 180</option>
+                    <option value="2000">2kg - KES 350</option>
+                </select>
+                <p class="price" id="pf-price">KES 100</p>
+                <button onclick="addToCart('Porridge Flour', 100, 1, '500g')" class="add-btn">Add to Cart</button>
+            </div>
+        </div>
+        <div class="delivery-note">
+            <p><strong>Free Delivery in Kisumu!</strong> Pay on Delivery for all orders.</p>
+        </div>
+    </section>
+
+    <section id="cart" class="cart-section">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <div class="cart-total">
+            <p>Total: <span id="cart-total">KES 0</span></p>
+            <button onclick="emptyCart()" class="empty-btn">Empty Cart</button>
+            <button onclick="placeOrder()" class="checkout-btn">Place Order</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Natural Harvest Foods. Kisumu, Kenya. <a href="tel:0714520249">Call: 0714 520 249</a> | Secure Pay on Delivery</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
